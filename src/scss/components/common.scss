@@ -55,10 +55,13 @@ a {
   .nav-toggle {
     font-size: 25px;
     position: absolute;
-    padding: 15px;
+    padding: 25px 12px;
     z-index: 99;
     top: 0;
     color: $general-color;
+    @media (max-width: 480px) {
+      padding: 27px 10px;
+    }
   }
   #backdrop {
     position: fixed;

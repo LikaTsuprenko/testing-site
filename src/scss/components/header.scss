@@ -5,6 +5,16 @@ header {
     @media (max-width: 1199px) {
       padding: 29px 0;
     }
+    @media (max-width: 991px) {
+      position: absolute;
+      left: 100%;
+      margin-left: -70px;
+      width: 130px;
+    }
+    @media (max-width: 480px) {
+      margin-left: -65px;
+      width: 110px;
+    }
     img {
       width: 100%;
     }
@@ -56,10 +66,16 @@ header {
   .client-info {
     padding: 23px 0;
     float: right;
+    @media (max-width: 991px) {
+      padding: 18px 0;
+    }
     .inform-about {
       & > li {
-        padding: 0 14px;
         position: relative;
+        padding: 0 14px;
+        @media (max-width: 991px) {
+          padding: 0;
+        }
         &:nth-child(1):after {
           content: '';
           position: absolute;

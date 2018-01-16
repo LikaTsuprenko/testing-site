@@ -149,16 +149,12 @@ $(function () {
 
 })(jQuery);
 
+//не просчитывает количество страниц автоматически, еще нет проверки на конечный номер страницы
 (function () {
     'use strict'
-
     const n = 8;
     const girlsList = document.querySelectorAll('.num');
-
-
-    let pagination = document.querySelectorAll('.pagination li');
-    let paginationEl = document.querySelectorAll('.pagination a');
-    let paginationWrap = document.querySelectorAll('.pagination');
+    const pagination = document.querySelectorAll('.pagination li');
 
     let pageActive = [...pagination].filter((item) => {
             if(item.classList.contains('active')) {
@@ -167,18 +163,16 @@ $(function () {
         })
     ;
     let pageNum = +pageActive[0].firstElementChild.innerHTML;
-//        console.log(pageActive, pageNum);
+
     let imemMax;
     let imemMin;
-//        console.log(pageNum, n, imemMin, imemMax);
 
     function getGirlsList() {
         imemMax = (n * pageNum) - 1;
         imemMin = n * (pageNum - 1);
-        console.log(pageNum, n, imemMin, imemMax);
         girlsList.forEach(function (item, i) {
             if (!( imemMin <= i && i <= imemMax )) {
-//                    console.log(item, i, pageNum);
+
                 item.style.display = 'none';
             } else {
                 item.style.display = 'block';
@@ -188,20 +182,22 @@ $(function () {
     getGirlsList();
 
     pagination.forEach(function (item) {
-        console.log(item);
         item.addEventListener("click", function (e) {
-            e.preventDefault();
 
+            e.preventDefault();
             if (e.target.innerHTML === 'prev' && pageNum > 1) {
                 --pageNum;
                 getGirlsList()
-            } else if (e.target.innerHTML === 'next' && pageNum < 4) {
+            } else if (e.target.innerHTML === 'next' && pageNum < 8) {
                 ++pageNum;
                 getGirlsList()
             } else if (e.target.parentNode.classList.contains('active') && e.target.innerHTML !== 'next' && e.target.innerHTML !== 'prev') {
-                console.log('active');
-                e.target.parentNode.classList.remove("active");
-            } else {console.log('no-active');
+                return false
+            } else if (e.target.innerHTML === 'prev' && pageNum == 1){
+                return false
+            }
+            else {console.log('no-active');
+                pagination.forEach(item => item.classList.remove("active"));
                 e.target.parentNode.className += "active";
                 pageNum = e.target.innerHTML;
                 getGirlsList()

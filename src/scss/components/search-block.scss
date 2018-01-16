@@ -74,6 +74,8 @@
     background-color: #FFF;
     width: calc(100% + 8px);
     box-sizing: border-box;
+    z-index: 88;
+    box-shadow: 1px 1px 6px #ddd;
   }
 
   .sel.active .sel__box {

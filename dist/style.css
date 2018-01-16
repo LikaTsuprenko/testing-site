@@ -44,10 +44,15 @@ a {
   .nav-toggle {
     font-size: 25px;
     position: absolute;
-    padding: 15px;
+    padding: 25px 12px;
     z-index: 99;
     top: 0;
-    color: #366cf7; }
+    color: #366cf7; } }
+  @media (max-width: 991px) and (max-width: 480px) {
+    .nav-toggle {
+      padding: 27px 10px; } }
+
+@media (max-width: 991px) {
   #backdrop {
     position: fixed;
     width: 100%;
@@ -65,6 +70,16 @@ header .logo {
   @media (max-width: 1199px) {
     header .logo {
       padding: 29px 0; } }
+  @media (max-width: 991px) {
+    header .logo {
+      position: absolute;
+      left: 100%;
+      margin-left: -70px;
+      width: 130px; } }
+  @media (max-width: 480px) {
+    header .logo {
+      margin-left: -65px;
+      width: 110px; } }
   header .logo img {
     width: 100%; }
 
@@ -108,9 +123,15 @@ header .main-menu {
 header .client-info {
   padding: 23px 0;
   float: right; }
+  @media (max-width: 991px) {
+    header .client-info {
+      padding: 18px 0; } }
   header .client-info .inform-about > li {
-    padding: 0 14px;
-    position: relative; }
+    position: relative;
+    padding: 0 14px; }
+    @media (max-width: 991px) {
+      header .client-info .inform-about > li {
+        padding: 0; } }
     header .client-info .inform-about > li:nth-child(1):after {
       content: '';
       position: absolute;
@@ -220,7 +241,9 @@ header .client-info {
     font-size: 1em;
     background-color: #FFF;
     width: calc(100% + 8px);
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    z-index: 88;
+    box-shadow: 1px 1px 6px #ddd; }
   .search-block .sel.active .sel__box {
     display: block;
     animation: fadeInUp 500ms; }
@@ -551,7 +574,7 @@ header .client-info {
   background: #f0f0f0; }
 
 .global-search .girls-list .col-md-3 {
-  padding-top: 25px; }
+  margin-top: 25px; }
 
 @media (max-width: 510px) {
   .global-search .girls-list .col-xs-6 {
@@ -559,7 +582,8 @@ header .client-info {
 
 .global-search .inform-card {
   position: relative;
-  border-radius: 8px; }
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px #ddd; }
 
 .global-search .filter-control {
   display: inline-block;
@@ -704,15 +728,12 @@ header .client-info {
     @media (max-width: 510px) {
       .global-search .data-card .status-online {
         margin-right: 63%; } }
-    @media (min-width: 402px) and (max-width: 480px) {
-      .global-search .data-card .status-online {
-        margin-right: 50%; } }
     @media (min-width: 401px) and (max-width: 440px) {
       .global-search .data-card .status-online {
-        margin-right: 50%; } }
+        margin-right: 57%; } }
     @media (min-width: 343px) and (max-width: 400px) {
       .global-search .data-card .status-online {
-        margin-right: 42%; } }
+        margin-right: 47%; } }
     @media (min-width: 320px) and (max-width: 342px) {
       .global-search .data-card .status-online {
         margin-right: 36%; } }
