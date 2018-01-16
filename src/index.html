@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel='stylesheet' href='../dist/style.css'>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="logo"><!--BEM /// header__logo logo-->
+                        <img src="img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <a class="nav-toggle fa fa-bars visible-sm visible-xs" href="#"></a>
+                    <div class="main-menu"><!--BEM /// menu header__menu-->
+                        <ul>
+                            <a class="nav-toggle mobile-menu fa fa-times visible-sm visible-xs" href="#"></a>
+                            <li><a href="#">Поиск</a></li><!--BEM /// menu__item-->
+                            <li><a href="#">Мои переписки</a></li>
+                            <li><a href="#">Избранное</a></li>
+                            <li><a href="#">Кто смотрел</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="client-info">
+                        <ul class="inform-about">
+                            <li class="hidden-md hidden-sm hidden-xs"><a href="#">Премиум</a></li>
+                            <li class="hidden-md hidden-sm hidden-xs"><a href="#">100 кредитов</a></li>
+                            <li>
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenu1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        <img src="img/avatar.png" alt=""><span class="glyphicon glyphicon-menu-down"
+                                                                               aria-hidden="true"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider visible-md"></li>
+                                        <li class="visible-md visible-sm visible-xs"><a href="#">Премиум</a></li>
+                                        <li class="visible-md visible-sm visible-xs"><a href="#">100 кредитов</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="photo-girls"><!--BEM /// -->
+    <div class="container">
+        <div class="girls-avatars flexbox"><!--BEM /// girls-list-->
+            <div class="photo"><!--BEM /// girls-list__item-->
+                <a href="#"><img src="img/girl-7.png" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="#"> <img src="img/girl-8.png" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="#"> <img src="img/girl-1.png" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="#"><img src="img/girl-2.png" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="#"> <img src="img/girl-6.png" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="#"> <img src="img/girl-3.png" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="#"><img src="img/girl-4.png" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="#"><img src="img/girl-5.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="search-block">
+    <h1 class="main-title">Я ищу</h1>
+    <div class="container">
+        <div class="row"><!--BEM /// form /// form__select /// form__input // form__submit-->
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="sel-list">
+                    <div class="sel sel-black-panther">
+                        <select name="select-profession" id="select-profession">
+                            <option value="" disabled>Выбрать пол</option>
+                            <option value="girl">Девушки</option>
+                            <option value="man">Мужчины</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="city-wrap">
+                    <input type="text" value="Санкт-Петербург" class="zbz-input-clearable"/>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="range-slider">
+                    <h5>Возраст</h5>
+                    <div class="margin-left">
+                        <input type="text" id="range" value="" name="range"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="btn-search">
+                    <button class="btn btn-default" type="button">Найти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="global-search">
+    <div class="search-link">
+        <div class="line"></div>
+        <a href="#">Расширеный поиск<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+    </div>
+    <div class="girls-grid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="filter-control">
+                        <button>Онлайн</button>
+                        <button class="active">Новые</button>
+                        <button>Популярные</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="girls-list">
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=1>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-11.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=2>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-12.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=3>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-17.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=4>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-14.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=5>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-16.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=6>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-17.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=7>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-18.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=8>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-15.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=9>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-18.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=10>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-17.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=11>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-16.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=12>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-14.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=13>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-16.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=14>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-11.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=15>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-14.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num col-md-3 col-sm-6 col-xs-6" data-num=16>
+                        <div class="inform-card">
+                            <div class="girl-item">
+                                <img src="img/girl-17.png" alt="">
+                                <div class="photo-icon">
+                                    <img src="img/photo-icon.png" alt="">
+                                    <span>12</span>
+                                </div>
+                                <div class="top-icon">
+                                    <img src="img/top-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <div class="favourites">
+                                    <a href="#"><span><img src="img/star-icon.png" alt=""></span>Избранное</a>
+                                </div>
+                                <div class="message">
+                                    <a href="#"><span><img src="img/mail-icon.png" alt=""></span>Написать</a>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <div class="name">Кристиночка, <span class="age">26</span><span
+                                        class="status-online"></span></div>
+                                <div class="address">Санкт-Петербург, Россия</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination-wrapper">
+                <nav aria-label="page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <li><a href="#">Правила</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Обратная связь</a></li>
+                </ul>
+                <p>©«KIKI». Лучший on-line сервис по поиску спонсоров и содержанок, 2015-2017</p>
+                <p>Администрация не несёт ответственности за размещённые анкеты. Вся информация на сайте предоставлена
+                    посетителями.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<script type="text/javascript" src="../dist/bundle.js"></script>
+</body>
+</html>

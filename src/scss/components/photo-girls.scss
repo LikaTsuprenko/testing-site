@@ -1,0 +1,16 @@
+.photo-girls {
+  background: $color-bg;
+  .girls-avatars {
+    padding: 30px 0;
+  }
+  .photo {
+    width: 11%;
+    @media (max-width: 991px) {
+      width: 21%;
+      padding: 20px 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

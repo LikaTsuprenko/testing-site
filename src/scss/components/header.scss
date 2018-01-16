@@ -1,0 +1,116 @@
+header {
+  .logo {
+    float: left;
+    padding: 26px 0;
+    @media (max-width: 1199px) {
+      padding: 29px 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .main-menu {
+    float: left;
+    padding: 33px 0;
+    @media (max-width: 991px) {
+      color: $general-color;
+      padding: 15px;
+      text-shadow: none;
+    }
+    & > ul {
+      @media (max-width: 991px) {
+        position: fixed;
+        z-index: 99;
+        left: -250px;
+        width: 250px;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 60px 0;
+        height: 100%;
+        top: 0;
+        transition: ease-in-out 0.7s;
+      }
+    }
+    & > ul.active {
+      @media (max-width: 991px) {
+        display: block;
+        left: 0;
+      }
+
+    }
+    li {
+      padding: 0 10px;
+      @media (max-width: 991px) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        float: none;
+        display: block;
+        padding: 20px 15px;
+      }
+      a {
+        font-size: 15px;
+        @media (max-width:991px) {
+          color: $white;
+        }
+      }
+    }
+  }
+  .client-info {
+    padding: 23px 0;
+    float: right;
+    .inform-about {
+      & > li {
+        padding: 0 14px;
+        position: relative;
+        &:nth-child(1):after {
+          content: '';
+          position: absolute;
+          background-image: url('../img/premium-icon.png');
+          width: 14px;
+          height: 14px;
+          top: 3px;
+          right: -4px;
+        }
+        &:nth-child(2) {
+          margin-right: -17px;
+          a {
+            color: $general-color;
+          }
+        }
+        &:nth-child(3) {
+          .dropdown {
+            .dropdown-menu {
+              border: none;
+              border-radius: 0;
+              @media (max-width: 1199px) {
+                float: right;
+                right: 0;
+                left: auto;
+                border-radius: 0;
+              }
+              a {
+                font-size: 13px;
+
+              }
+            }
+
+            button#dropdownMenu1 {
+              background: $white;
+              border: none;
+            }
+          }
+          span {
+            color: $general-color;
+            font-size: 10px;
+            font-weight: 700;
+            margin-left: 5px;
+          }
+
+        }
+      }
+    }
+    a {
+      font-size: 14px;
+    }
+  }
+}
+
+
